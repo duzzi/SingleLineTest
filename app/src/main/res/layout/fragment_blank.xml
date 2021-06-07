@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#22ffff00"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:background="#22ffff00"
+            android:singleLine="false"
+            android:text="当仅设置singleLine=false时，不影响ViewPager滑动"
+            style="@style/text_style" />
+
+        <TextView
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:singleLine="true"
+            android:text="当仅设置singleLine=true时，不影响ViewPager滑动" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_gravity="center_horizontal"
+            android:background="#22ffff00"
+            android:singleLine="true"
+            android:text="当singleLine=true且gravity为默认值start|top，不影响ViewPager滑动" />
+
+        <TextView
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="当singleLine=true且gravity=center，会影响ViewPager滑动"
+            android:textColor="#F44336"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:text="当singleLine=true且gravity=right，会影响ViewPager滑动"
+            android:textColor="#F44336"
+            android:scrollHorizontally="false"
+            android:textStyle="bold" />
+
+        <com.duzzi.singleline.UnScrollTextView
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="自定义TextView重写canScrollHorizontally返回false，可正常滑动ViewPager"
+            android:textColor="#009688" />
+
+        <TextView
+            android:id="@+id/manualUnScrollTextView"
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="手动设置TextView为setHorizontallyScrolling(false)，可正常滑动ViewPager"
+            android:textColor="#009688"
+            android:scrollHorizontally="false"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/text_style"
+            android:background="#22ffff00"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="使用maxLines=1，可正常滑动ViewPager"
+            android:textColor="#009688"
+            android:scrollHorizontally="false"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
